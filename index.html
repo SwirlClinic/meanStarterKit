@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="bear">
+<head>
+	<meta charset="UTF-8">
+	<title>Getting Started</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/gay.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+</head>
+
+<body ng-controller="mainController">
+
+	<header>
+		<nav class="navbar navbar-inverse">
+			<a class="navbar-brand">home</a>
+			<ul class="navbar-nav nav">
+				<li>
+					<a href="/">asd</a>
+				</li>
+				<li>
+					<a href="/">Dar</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="kaboom">
+		<div class='content'>
+			<h2>Welcome!</h2>
+			<p>blah blah blah</p>
+
+			<a class="btn-primary btn btn-lg">lets go bruh</a>
+		</div>
+	</section>
+
+	<main>
+		<div class="jumbotron text-center">
+		<h1>Hello world! 🤔</h1>
+		<h1>test</h1>
+
+		<button class="btn btn-primary" onclick="changeText()">Change text</button>
+		</div>
+
+		<div class="jumbotron text-center" ng-repeat="bear in bears">
+			<p>Name: {{bear.name}}</p>
+		</div>
+	</main>
+
+	<footer>
+	<p>hi</p>
+	</footer>
+
+	<!-- start javascript -->
+	<script src="/js/test.js"></script>
+
+
+
+
+</body>
+
+</html>

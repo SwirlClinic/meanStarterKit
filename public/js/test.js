@@ -11,6 +11,17 @@ function mainController($scope, $http) {
         .error(function(data) {
             console.log('Error: ' + data);
         });
+
+    $scope.saveBear = function(bear) {
+        $http.post('/api/bears', bear)
+        .success(function(data) {
+            console.log('Success! Saved ' + data);
+            $scope.bears.push(bear);
+        })
+        .error(function(data) {
+            console.log('Error: ' + data);
+        });
+    };
 }
 
 const header = document.querySelector('h1');

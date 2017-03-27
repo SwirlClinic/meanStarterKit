@@ -44,8 +44,17 @@
 		<button class="btn btn-primary" onclick="changeText()">Change text</button>
 		</div>
 
-		<div class="jumbotron text-center" ng-repeat="bear in bears">
-			<p>Name: {{bear.name}}</p>
+		<div class="container">
+			<form ng-submit="saveBear(bear)">
+	          <div class="form-group">
+	            <input type="text" placeholder="Name" ng-model="bear.name" class="form-control">
+	          </div>
+	          <button type="submit" class="btn btn-primary">Submit</button>
+	        </form>
+
+			<div class="jumbotron text-center" ng-repeat="bear in bears.slice().reverse()">
+				<p>Name: {{bear.name}}</p>
+			</div>
 		</div>
 	</main>
 

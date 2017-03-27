@@ -4,14 +4,13 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
+var mongdbConnection = require('./app/connection');
 
 
 
 //Connect to db
-
-mongoose.connect('mongodb://username:password@serverip:port/db');
-var db = mongoose.connection;
+var db = mongdbConnection;
 db.on('connected', function() {
     console.log("Connected");
 });

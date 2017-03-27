@@ -7,5 +7,5 @@ Setup
 
 1. Clone this to a directory
 2. npm install
-3. in server.js configure mongodb connection
+3. go to app/connection.js to configure mongodb connection
 4. start with "node server.js"
